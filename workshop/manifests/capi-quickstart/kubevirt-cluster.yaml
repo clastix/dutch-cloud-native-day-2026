@@ -1,0 +1,9 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+kind: KubevirtCluster
+metadata:
+  annotations:
+    # The Control Plane is not made of VMs: Kamaji provides the endpoint,
+    # CAPK must not create its own LoadBalancer Service.
+    cluster.x-k8s.io/managed-by: kamaji
+  name: capi-quickstart
+  namespace: default

@@ -1,0 +1,16 @@
+{
+  "name": "dutch-cloud-native-days-2026",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build"
+  },
+  "dependencies": {
+    "@fontsource/dm-mono": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@slidev/cli": "^53.0.0",
+    "@slidev/theme-default": "^0.25.0",
+    "vue": "^3.5.0"
+  }
+}

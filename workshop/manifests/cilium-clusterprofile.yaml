@@ -1,0 +1,32 @@
+apiVersion: config.projectsveltos.io/v1beta1
+kind: ClusterProfile
+metadata:
+  name: cilium-cni
+spec:
+  # Every Cluster API cluster carries this label: match them all.
+  # (An empty selector matches no cluster at all in Sveltos.)
+  clusterSelector:
+    matchExpressions:
+    - key: cluster.x-k8s.io/cluster-name
+      operator: Exists
+  # Reconcile forever, and revert any change made in the tenant cluster
+  syncMode: ContinuousWithDriftDetection
+  stopMatchingBehavior: WithdrawPolicies
+  continueOnConflict: false
+  continueOnError: false
+  reloader: false
+  tier: 100
+  helmCharts:
+  - repositoryName: cilium
+    repositoryURL: https://helm.cilium.io
+    chartName: cilium/cilium
+    chartVersion: 1.20.4
+    releaseName: cilium
+    releaseNamespace: cilium
+    helmChartAction: Install
+    values: |
+      hubble:
+        enabled: false
+      ipam:
+        # Pod CIDRs are allocated per node from the Cluster's clusterNetwork
+        mode: kubernetes

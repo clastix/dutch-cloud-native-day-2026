@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+dist/
+.slidev/
+*.local
+# generated during the workshop
+workshop/*.kubeconfig

@@ -1,0 +1,21 @@
+apiVersion: cluster.x-k8s.io/v1beta2
+kind: Cluster
+metadata:
+  name: capi-quickstart
+  namespace: default
+spec:
+  clusterNetwork:
+    pods:
+      cidrBlocks:
+      - 10.243.0.0/16
+    services:
+      cidrBlocks:
+      - 10.95.0.0/16
+  controlPlaneRef:
+    apiGroup: controlplane.cluster.x-k8s.io
+    kind: KamajiControlPlane
+    name: capi-quickstart-kubevirt
+  infrastructureRef:
+    apiGroup: infrastructure.cluster.x-k8s.io
+    kind: KubevirtCluster
+    name: capi-quickstart

@@ -1,0 +1,467 @@
+/*
+ * CLASTIX brand tokens, from https://clastix.io/brand
+ * Colour balance: ~60% white, 25% Clastix Blue, 10% Lilac, 5% Magenta.
+ * Magenta has no tints and is reserved for emphasis, key figures and calls to action.
+ */
+:root {
+  --cx-blue: #000080;
+  --cx-blue-50: #e6e6f2;
+  --cx-blue-100: #ccccE6;
+  --cx-blue-200: #9999cc;
+  --cx-blue-300: #6666b3;
+  --cx-blue-400: #333399;
+  --cx-blue-600: #000066;
+  --cx-blue-700: #00004d;
+  --cx-blue-800: #000033;
+  --cx-magenta: #d81d56;
+  --cx-lilac: #ccccE6;
+  --cx-white: #ffffff;
+
+  --cx-gray-50: #fbfbfb;
+  --cx-gray-100: #f8f8f8;
+  --cx-gray-200: #f1f1f1;
+  --cx-gray-300: #e9eaea;
+  --cx-gray-600: #afb0af;
+  --cx-gray-700: #838483;
+  --cx-gray-800: #585858;
+
+  --cx-font: "Montserrat", Arial, Helvetica, sans-serif;
+  --cx-mono: "DM Mono", ui-monospace, monospace;
+
+  --slidev-theme-primary: var(--cx-blue);
+  --slidev-code-background: var(--cx-blue-50);
+  --slidev-code-font-family: var(--cx-mono);
+  --slidev-code-font-size: 13px;
+  --slidev-code-line-height: 20px;
+  --slidev-code-radius: 6px;
+  --slidev-code-padding: 12px 16px;
+}
+
+/* ---------- Base ---------- */
+
+.slidev-layout {
+  font-family: var(--cx-font);
+  color: var(--cx-blue-800);
+  background: var(--cx-white);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.slidev-layout h1 {
+  font-weight: 600;
+  font-size: 2.125rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--cx-blue);
+  margin-bottom: 1.25rem;
+}
+
+.slidev-layout h1 + p {
+  opacity: 1;
+}
+
+.slidev-layout h2 {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--cx-blue);
+  margin: 0.5rem 0 0.5rem;
+}
+
+.slidev-layout h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cx-blue);
+  margin: 0 0 0.35rem;
+}
+
+.slidev-layout strong {
+  font-weight: 600;
+  color: var(--cx-blue);
+}
+
+.slidev-layout em {
+  font-style: italic;
+}
+
+.slidev-layout a {
+  color: var(--cx-blue);
+  border-bottom: 1px solid var(--cx-blue-200);
+}
+
+.slidev-layout ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.slidev-layout ul > li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.slidev-layout ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--cx-blue);
+}
+
+.slidev-layout code:not(pre code) {
+  font-family: var(--cx-mono);
+  font-size: 0.88em;
+  background: var(--cx-blue-50);
+  color: var(--cx-blue-700);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.slidev-layout pre,
+.slidev-layout .slidev-code {
+  font-family: var(--cx-mono) !important;
+}
+
+.slidev-layout table {
+  font-size: 0.95rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.slidev-layout th {
+  font-weight: 600;
+  color: var(--cx-blue);
+  text-align: left;
+  border-bottom: 2px solid var(--cx-blue);
+  padding: 0.4rem 0.6rem;
+}
+
+.slidev-layout td {
+  border-bottom: 1px solid var(--cx-blue-100);
+  padding: 0.4rem 0.6rem;
+}
+
+/* ---------- Brand helpers ---------- */
+
+/* Eyebrow: Semibold, Magenta, above a headline */
+.eyebrow {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: var(--cx-magenta);
+  margin: 0 0 0.5rem !important;
+}
+
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--cx-blue-800);
+}
+
+.muted {
+  color: var(--cx-gray-800);
+}
+
+.caption {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--cx-gray-800);
+}
+
+.accent {
+  color: var(--cx-magenta);
+  font-weight: 600;
+}
+
+/* Key figure: Magenta is reserved for exactly this kind of emphasis */
+.figure {
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--cx-magenta);
+}
+
+.card {
+  background: var(--cx-blue-50);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+}
+
+.card.lilac {
+  background: var(--cx-lilac);
+}
+
+.card.bordered {
+  background: var(--cx-white);
+  border: 1.5px solid var(--cx-blue-200);
+}
+
+.card.solid {
+  background: var(--cx-blue);
+  color: var(--cx-white);
+}
+
+.card.solid h3,
+.card.solid strong {
+  color: var(--cx-white);
+}
+
+.card p {
+  margin: 0;
+}
+
+.card p + p {
+  margin-top: 0.6rem;
+}
+
+.card.solid ul > li::before {
+  background: var(--cx-lilac);
+}
+
+/* Quote: Medium, Blue 800, Clastix Blue rule on the left */
+.quote {
+  font-weight: 500;
+  color: var(--cx-blue-800);
+  border-left: 4px solid var(--cx-blue);
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+
+.badge {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  border-radius: 4px;
+  background: var(--cx-blue);
+  color: var(--cx-white);
+  vertical-align: middle;
+}
+
+.badge.magenta {
+  background: var(--cx-magenta);
+}
+
+.badge.lilac {
+  background: var(--cx-lilac);
+  color: var(--cx-blue);
+}
+
+.badge.bordered {
+  background: transparent;
+  color: var(--cx-blue);
+  border: 1px solid var(--cx-blue-300);
+}
+
+/* ---------- Diagram primitives ---------- */
+
+.zone {
+  position: relative;
+  border: 1.5px dashed var(--cx-blue-300);
+  border-radius: 10px;
+  padding: 1.6rem 0.9rem 0.9rem;
+}
+
+.zone > .zone-label {
+  position: absolute;
+  top: -0.7rem;
+  left: 0.8rem;
+  background: var(--cx-white);
+  padding: 0 0.4rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--cx-blue);
+}
+
+.zone.platform {
+  border-style: solid;
+  border-color: var(--cx-blue);
+  background: var(--cx-blue-50);
+}
+
+.zone.platform .zone:not(.platform) > .zone-label {
+  background: var(--cx-blue-50);
+}
+
+.zone.platform > .zone-label {
+  background: var(--cx-blue);
+  color: var(--cx-white);
+  border-radius: 4px;
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+  background: var(--cx-white);
+  border: 1.5px solid var(--cx-blue);
+  color: var(--cx-blue);
+}
+
+.node.cp {
+  background: var(--cx-blue);
+  color: var(--cx-white);
+}
+
+.node.ghost {
+  border-style: dashed;
+  color: var(--cx-blue-300);
+  border-color: var(--cx-blue-200);
+}
+
+.node.hot {
+  border-color: var(--cx-magenta);
+  color: var(--cx-magenta);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  background: var(--cx-magenta);
+  color: var(--cx-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+/* ---------- Dark layouts (cover, section, end) ---------- */
+
+.slidev-layout.cx-dark {
+  position: relative;
+  overflow: hidden;
+  background: var(--cx-blue);
+  color: var(--cx-white);
+  padding: 3rem 3.5rem;
+}
+
+.cx-dark h1 {
+  color: var(--cx-white);
+}
+
+.cx-dark p,
+.cx-dark li {
+  color: var(--cx-lilac);
+}
+
+.cx-dark strong {
+  color: var(--cx-white);
+}
+
+.cx-dark .eyebrow {
+  /* Magenta lacks contrast on Clastix Blue at eyebrow size: Lilac instead */
+  color: var(--cx-lilac);
+}
+
+.cx-ghost {
+  position: absolute;
+  right: -4rem;
+  bottom: -5rem;
+  width: 26rem;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.cx-logo {
+  width: 150px;
+}
+
+.cx-cover {
+  display: flex;
+  flex-direction: column;
+}
+
+.cx-cover-body {
+  margin-top: auto;
+  max-width: 44rem;
+}
+
+.cx-cover h1 {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.cx-section {
+  display: flex;
+  align-items: center;
+}
+
+.cx-section-body {
+  max-width: 40rem;
+}
+
+.cx-section-number {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cx-white) !important;
+  border-bottom: 3px solid var(--cx-magenta);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.cx-section h1 {
+  font-size: 2.75rem;
+  line-height: 1.15;
+}
+
+.cx-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cx-end-body {
+  max-width: 44rem;
+}
+
+.cx-logo-end {
+  position: absolute;
+  left: 3.5rem;
+  bottom: 2.5rem;
+  width: 150px;
+}
+
+/* ---------- Footer ---------- */
+
+.cx-footer {
+  position: absolute;
+  left: 3.5rem;
+  right: 3.5rem;
+  bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--cx-font);
+  font-size: 0.7rem;
+  color: var(--cx-gray-800);
+}
+
+.cx-footer img {
+  width: 20px;
+}
+
+.cx-footer-page {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.cx-speaker {
+  margin-top: 2.5rem !important;
+  font-size: 1rem;
+}

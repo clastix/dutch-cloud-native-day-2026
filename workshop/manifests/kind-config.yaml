@@ -1,0 +1,7 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  # the default CNI (kindnet) will not be installed: Calico takes its place
+  disableDefaultCNI: true
+nodes:
+- role: control-plane
